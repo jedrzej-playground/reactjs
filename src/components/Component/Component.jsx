@@ -8,17 +8,14 @@ class Component extends React.Component {
     }
     render() {
         return (
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+            <div className={"child"}>
+                <img src={logo} className={"component-logo"} alt={"logo"} />
                 <p>
                   {this.props.msg}
                 </p>
-              </header>
             </div>
-          )
+        )
     }
-
 }
 
 export default Component;

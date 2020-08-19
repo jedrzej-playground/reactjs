@@ -8,15 +8,13 @@ class PureComponent extends React.PureComponent {
     }
     render() {
         return (
-            <div className="App">
-              <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+            <div className={"child"}>
+                <img src={logo} className={"pure-component-logo"} alt={"logo"} />
                 <p>
                   {this.props.msg}
                 </p>
-              </header>
             </div>
-          )
+        )
     }
 
 }
