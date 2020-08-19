@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.child {
+  max-width: 200px;
+  padding: 30px;
+}
