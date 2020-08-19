@@ -3,9 +3,6 @@ import logo from '../../logo.svg';
 import './PureComponent.css';
 
 class PureComponent extends React.PureComponent {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div className={"child"}>
