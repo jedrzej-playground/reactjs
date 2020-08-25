@@ -1,0 +1,8 @@
+.front-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: dashed;
+    border-color: brown;
+    width: 1000px;
+}

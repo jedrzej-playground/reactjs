@@ -1,0 +1,7 @@
+.options-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-style: dashed;
+    border-color: blue;
+}
