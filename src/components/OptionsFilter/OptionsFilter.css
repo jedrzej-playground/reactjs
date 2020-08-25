@@ -1,4 +1,22 @@
 .options-filter {
-    border-style: dashed;
-    border-color: red;
+    width: 450px;
+}
+
+.filter-list {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+.filter-element {
+    line-height: 49px;
+    cursor: pointer;
+}
+
+.filter-element-selected {
+    box-shadow: inset 0px -4px 0px 0px #f65261;
 }

@@ -1,4 +1,10 @@
 .options-sorter {
-    border-style: dashed;
-    border-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    line-height: 49px;
 }

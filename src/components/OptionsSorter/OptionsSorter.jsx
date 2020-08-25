@@ -3,7 +3,11 @@ import './OptionsSorter.css';
 
 const OptionsSorter = () =>
     <div className={"options-sorter"}>
-        OptionsSorter
+        Sort by&nbsp;
+        <select>
+            <option>Release Date</option>
+            <option>Albhabetical</option>
+        </select>
     </div>
 
 export default OptionsSorter;

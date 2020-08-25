@@ -4,8 +4,18 @@ import './ResultBody.css';
 
 const ResultBody = () =>
     <div className={"result-body"}>
-        ResultBody
-        <MovieCard />
+        <div className={"result-found-text"}>XX movies found</div>
+        <div className={"movie-card-area"}>
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+            <MovieCard />
+        </div>
     </div>
 
 export default ResultBody;

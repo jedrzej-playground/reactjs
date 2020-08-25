@@ -1,4 +1,11 @@
 .result-body {
-    border-style: dashed;
-    border-color: brown;
+    width: 100%;
+    background-color: #232323;
+}
+
+.movie-card-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

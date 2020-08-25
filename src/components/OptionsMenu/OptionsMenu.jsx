@@ -4,7 +4,7 @@ import OptionsSorter from '../OptionsSorter/OptionsSorter';
 import './OptionsMenu.css';
 
 const OptionsMenu = () =>
-    <div className={"options-menu"}>OptionsMenu
+    <div className={"options-menu"}>
         <OptionsFilter></OptionsFilter>
         <OptionsSorter></OptionsSorter>
     </div>
