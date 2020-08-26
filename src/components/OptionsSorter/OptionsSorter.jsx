@@ -1,12 +1,13 @@
 import React from 'react';
 import './OptionsSorter.css';
 
+const sortBy = ["Release Date", "Title", "Averege votes", "Runtime"]
+
 const OptionsSorter = () =>
     <div className="options-sorter">
         Sort by&nbsp;
         <select>
-            <option>Release Date</option>
-            <option>Alphabetical</option>
+            {sortBy.map(sortMethod => <option value={sortMethod}>{sortMethod}</option>)}
         </select>
     </div>
 

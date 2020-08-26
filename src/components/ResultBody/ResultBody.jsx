@@ -5,13 +5,15 @@ import movieMock from './movieMock';
 import './ResultBody.css';
 
 const ResultBody = () => {
-    const [movies] = useState(
+    const [movies, setMovies] = useState(
         movieMock
     );
 
-    const [error, setError] = useState(false);
+    //setMovies(0); //killswitch - yeah, I know, user can search movie which gives 0 results, but I don't have idea what other error I can simulate now :)
 
-    if(movies.length === 0) setError(true); //yeah, I know, user can search movie which gives 0 results, but I don't have idea what other error I can simulate now :)
+    if(movies.length === 0) {
+        throw new Error('I crashed!');
+    }
 
     return(
         <div className="result-body">
