@@ -1,7 +1,7 @@
 import React from 'react';
 import './ErrorBoundary.css';
 
-export const FallbackText = () => (
+const FallbackText = () => (
     <div className="error-msg">
         Yoinks! Something went wrong. Please refresh page in few minutes.
     </div>
