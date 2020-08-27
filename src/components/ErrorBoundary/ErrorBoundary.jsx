@@ -1,7 +1,7 @@
 import React from 'react';
 import './ErrorBoundary.css';
 
-const FallbackText = () => (
+export const FallbackText = () => (
     <div className="error-msg">
         Yoinks! Something went wrong. Please refresh page in few minutes.
     </div>
@@ -23,10 +23,10 @@ class ErrorBoundary extends React.Component {
     render() {
         return(
             <>
-                {this.state.error ? <FallbackText /> : this.props.children};
+                {this.state.error ? <FallbackText /> : this.props.children}
             </>
         )
     }
 }
 
-  export default ErrorBoundary;
+export default ErrorBoundary;
