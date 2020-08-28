@@ -23,8 +23,6 @@ const MovieCard = (props) =>
         <span className="genre">{props.movie.genres.join(', ')}</span>
     </div>
 
-export default MovieCard;
-
 MovieCard.propTypes = {
     movie: PropTypes.shape({
         poster_path: PropTypes.string.isRequired,
@@ -33,3 +31,5 @@ MovieCard.propTypes = {
         genres: PropTypes.array.isRequired
     })
 };
+
+export default MovieCard;
