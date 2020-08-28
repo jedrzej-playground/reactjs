@@ -1,0 +1,18 @@
+.result-body {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #232323;
+}
+
+.result-found-text {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.movie-card-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

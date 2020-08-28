@@ -1,0 +1,23 @@
+.options-filter {
+    width: 450px;
+}
+
+.filter-list {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+    line-height: 49px;
+}
+
+.filter-element {
+    cursor: pointer;
+}
+
+.filter-element-selected {
+    cursor: pointer;
+    box-shadow: inset 0px -4px 0px 0px #f65261;
+}
