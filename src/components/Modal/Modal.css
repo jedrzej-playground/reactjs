@@ -1,0 +1,81 @@
+.modal {
+    position: fixed;
+    width: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #282c34;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+    z-index: 667; /* bigger evil */
+}
+
+.modal-title {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin: 30px 10px;
+}
+
+.modal-content {
+    margin: 30px 10px;
+}
+
+.modal-content-title {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #f65261;
+}
+
+.modal-content-input {
+    margin-top: 5px;
+    background-color: rgba(66, 66, 66, 0.9);
+    color: rgb(137, 149, 160);
+    border: none;
+    height: 45px;
+    min-width: 90%;
+    font-size: 16px;
+    padding: 1px 10px 1px 10px;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+.modal-footer {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer .reset-button {
+    background-color: rgba(66, 66, 66, 0);
+    border-color: rgba(246, 82, 97, 1);
+    color: rgba(246, 82, 97, 1);
+    padding: 14px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.modal-footer .submit-button {
+    background-color: rgba(246, 82, 97, 1);
+    color: white;
+    border: none;
+    padding: 14px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    cursor: pointer;
+}

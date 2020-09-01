@@ -14,7 +14,12 @@ const MovieCard = (props) =>
                     e.target.src=noImage
                 }}
             />
-            <div className="movie-menu-button"></div>
+            <div className="movie-menu-button">
+            <div className="movie-dropdown-content">
+                <a href="#1">Edit</a>
+                <a href="#2">Delete</a>
+                </div>
+            </div>
         </div>
         <div className="title-year">
             <span className="title">{props.movie.title}</span>
