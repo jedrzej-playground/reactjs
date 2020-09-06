@@ -1,34 +1,19 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = () => 
+const Modal = ({onClose, title, content, buttons}) => 
     <div className="modal">
-        <div className="modal-title">Title</div>
-        <div className="modal-content">
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
-
-            <div className="modal-content-title">inputz</div>
-            <input className="modal-content-input" />
+        <button className="modal-close-button" onClick={onClose}>X</button>
+        <div className="modal-title">
+            {title}
         </div>
+
+        <div className="modal-content">
+            {content}
+        </div>
+
         <div className="modal-footer">
-            <button className="reset-button">reset</button>
-            <button className="submit-button">submit</button>
+            {buttons}
         </div>
     </div>
 
