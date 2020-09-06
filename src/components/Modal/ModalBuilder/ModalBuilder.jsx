@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from '../Modal';
 
-const modalRoot = document.getElementById('modal-root');
-
 const ModalBuilder = ({onClose, action, movie, movieId}) => {
 
     let title, content, buttons;
@@ -42,10 +40,8 @@ const ModalBuilder = ({onClose, action, movie, movieId}) => {
         content = "Are you sure you want to delete this movie?";
         buttons = 
             <>
-            <button className="submit-button">Confirm</button>
-            </>
-            
-        let deleteId = movieId;
+            <button value={movieId} className="submit-button">Confirm</button>
+            </>            
     } 
 
     return(

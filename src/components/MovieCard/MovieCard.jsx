@@ -22,8 +22,8 @@ const MovieCard = (props) => {
                 />
                 <div className="movie-menu-button">
                 <div className="movie-dropdown-content">
-                    <a onClick={() => setShowEditModal(true)}>Edit</a>
-                    <a onClick={() => setShowDeleteModal(true)}>Delete</a>
+                    <a href="#1" onClick={() => setShowEditModal(true)}>Edit</a>
+                    <a href="#2" onClick={() => setShowDeleteModal(true)}>Delete</a>
                     </div>
                 </div>
             </div>

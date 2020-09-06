@@ -434,24 +434,6 @@ const movieMock = [
         "runtime": 112
     },
     {
-        "id": 22,
-        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-        "tagline": "Prepare to be blown out of the water.",
-        "vote_average": 7.5,
-        "vote_count": 8914,
-        "release_date": "2003-07-09",
-        "poster_path": "https://image.tmdb.org/t/p/w500/tkt9xR1kNX5R9rCebASKck44si2.jpg",
-        "overview": "Jack Sparrow, a freewheeling 17th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.",
-        "budget": 140000000,
-        "revenue": 655011224,
-        "genres": [
-            "Adventure",
-            "Fantasy",
-            "Action"
-        ],
-        "runtime": 143
-    },
-    {
         "id": 122917,
         "title": "The Hobbit: The Battle of the Five Armies",
         "tagline": "Witness the defining chapter of the Middle-Earth saga",
