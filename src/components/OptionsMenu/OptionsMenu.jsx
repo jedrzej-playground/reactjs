@@ -3,9 +3,9 @@ import OptionsFilter from '../OptionsFilter/OptionsFilter';
 import OptionsSorter from '../OptionsSorter/OptionsSorter';
 import './OptionsMenu.css';
 
-const OptionsMenu = () =>
+const OptionsMenu = ({setFilter}) =>
     <div className="options-menu">
-        <OptionsFilter />
+        <OptionsFilter setFilter={setFilter} />
         <OptionsSorter />
     </div>
 

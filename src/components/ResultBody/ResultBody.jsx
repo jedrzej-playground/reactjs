@@ -15,13 +15,21 @@ const ResultBody = () => {
         setMovies(0); 
     }, [])
     */
+
+   const [filter, setFilter] = useState("All");
+   
+   const changeFilter = (filter) => {
+       setFilter(filter)
+   }
+
+    let filteredMovies = filter == "All" ? movies : movies.filter(movie => movie.genres.includes(filter));
     
     return (
         <div className="result-body">
-        <OptionsMenu />
-        <div className="result-found-text">{movies.length} movies found</div>
+        <OptionsMenu setFilter={changeFilter} />
+        <div className="result-found-text">{filteredMovies.length} movies found</div>
         <div className="movie-card-area">
-            {movies.map(movie => <MovieCard movie={movie} key={movie.id} />)}
+            {filteredMovies.map(movie => <MovieCard movie={movie} key={movie.id} />)}
         </div>
     </div>
     )
