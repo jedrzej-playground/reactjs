@@ -28,6 +28,7 @@
 
 .cover {
     position: relative;
+    cursor: pointer;
 }
 
 .hover-menu {
