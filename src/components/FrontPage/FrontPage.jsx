@@ -8,16 +8,27 @@ import './FrontPage.css';
 
 const FrontPage = () => {
 
-    const [showDetails, setShowDetails] = useState(true); //hardswitch
+    const [showDetails, setShowDetails] = useState(false); 
+    const [movie, setMovie] = useState([]); 
+
+    const passMovieToDetails = (movie) => {
+        console.log(movie);
+        setMovie(movie);
+        setShowDetails(true);
+    }
 
     return(
         <div className="front-page">
             {showDetails ?
-            <DetailsHeader /> :
+            <DetailsHeader 
+                movie={movie}
+            /> :
             <SearchAddHeader /> 
             }
             <ErrorBoundary>
-                <ResultBody />
+                <ResultBody
+                    onCoverClick={passMovieToDetails}
+                />
             </ErrorBoundary>
             <Footer />
         </div>

@@ -15,6 +15,7 @@ const MovieCard = (props) => {
                 <img 
                     src={props.movie.poster_path} 
                     alt={props.movie.title} 
+                    onClick={props.onCoverClick}
                     onError={(e)=> {
                         e.target.onerror = null; 
                         e.target.src=noImage

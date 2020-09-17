@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/netflix_roulette_logo.png';
 import './DetailsHeader.css';
 
-const DetailsHeader = () => {
+const DetailsHeader = (props) => {
 
     return(
         <div className="details-header">
@@ -12,16 +12,16 @@ const DetailsHeader = () => {
             </div>
             <div className="details-wrapper">
                 <div className="details-cover">
-                    <img src="https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg" className="details-logo" alt="logo" />
+                    <img src={props.movie.poster_path} className="details-logo" alt="logo" />
                 </div>
                 <div className="details-text">
                     <div className="details-text-title">
-                        Pulp Fiction
-                        <span className="details-text-title-score">5.0</span> 
+                        {props.movie.title}
+                        <span className="details-text-title-score">{props.movie.vote_average}</span> 
                     </div>
-                    <div className="details-text-tagline">Oscar winning movie</div>
-                    <div className="details-text-year-length">1994&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;154 min</div>
-                    <div className="details-text-overview">The city needs heroes. Darkness has settled over New York City as Shredder and his evil Foot Clan have an iron grip on everything from the police to the politicians. The future is grim until four unlikely outcast brothers rise from the sewers and discover their destiny as Teenage Mutant Ninja Turtles. The Turtles must work with fearless reporter April and her wise-cracking cameraman Vern Fenwick to save the city and unravel Shredder's diabolical plan.</div>
+                    <div className="details-text-tagline">{props.movie.tagline}</div>
+                    <div className="details-text-year-length">{props.movie.release_date.split('-')[0]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{props.movie.runtime} min</div>
+                    <div className="details-text-overview">{props.movie.overview}</div>
                 </div>
             </div>
         </div>

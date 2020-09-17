@@ -4,7 +4,7 @@ import MovieCard from '../MovieCard/MovieCard';
 import movieMock from './movieMock';
 import './ResultBody.css';
 
-const ResultBody = () => {
+const ResultBody = ({onCoverClick}) => {
     const [movies, setMovies] = useState(movieMock);
 
     //killswitch to test error msg - yeah, I know, user can search movie which gives 0 results, but I don't have idea what other error I can simulate now :)
@@ -42,7 +42,7 @@ const ResultBody = () => {
         <OptionsMenu setFilter={changeFilter} setSort={changeSort} />
         <div className="result-found-text">{sortedMovies.length} movies found</div>
         <div className="movie-card-area">
-            {sortedMovies.map(movie => <MovieCard movie={movie} key={movie.id} />)}
+            {sortedMovies.map(movie => <MovieCard movie={movie} key={movie.id} onCoverClick={() => onCoverClick(movie)} />)}
         </div>
     </div>
     )
