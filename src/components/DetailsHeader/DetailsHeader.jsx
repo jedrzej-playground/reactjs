@@ -8,7 +8,7 @@ const DetailsHeader = (props) => {
         <div className="details-header">
             <div className="details-logo-row">
                 <img src={logo} className="details-logo" alt="logo" />
-                <span onClick={() => ("")} className="details-search-button">&#x1F50D;</span>
+                <span onClick={props.onMagnifyClick} className="details-search-button">&#x1F50D;</span>
             </div>
             <div className="details-wrapper">
                 <div className="details-cover">

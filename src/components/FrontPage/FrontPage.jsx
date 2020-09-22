@@ -12,7 +12,6 @@ const FrontPage = () => {
     const [movie, setMovie] = useState([]); 
 
     const passMovieToDetails = (movie) => {
-        console.log(movie);
         setMovie(movie);
         setShowDetails(true);
     }
@@ -22,6 +21,7 @@ const FrontPage = () => {
             {showDetails ?
             <DetailsHeader 
                 movie={movie}
+                onMagnifyClick={() => setShowDetails(false)}
             /> :
             <SearchAddHeader /> 
             }

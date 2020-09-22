@@ -14,6 +14,10 @@ const ResultBody = ({onCoverClick}) => {
     }, [])
     */
 
+   useEffect(() => {
+    setMovies(movieMock); 
+    }, [])
+
     const [filter, setFilter] = useState("All");
 
     const [sort, setSort] = useState("release_date_desc");
