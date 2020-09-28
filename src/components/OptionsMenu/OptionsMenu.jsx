@@ -3,10 +3,10 @@ import OptionsFilter from '../OptionsFilter/OptionsFilter';
 import OptionsSorter from '../OptionsSorter/OptionsSorter';
 import './OptionsMenu.css';
 
-const OptionsMenu = () =>
+const OptionsMenu = ({setFilter, setSort}) =>
     <div className="options-menu">
-        <OptionsFilter />
-        <OptionsSorter />
+        <OptionsFilter setFilter={setFilter} />
+        <OptionsSorter setSort={setSort} />
     </div>
 
 export default OptionsMenu;

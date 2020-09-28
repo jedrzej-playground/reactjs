@@ -5,9 +5,7 @@ import movieMock from './movieMock';
 import './ResultBody.css';
 
 const ResultBody = () => {
-    const [movies, setMovies] = useState(
-        movieMock
-    );
+    const [movies, setMovies] = useState(movieMock);
 
     //killswitch to test error msg - yeah, I know, user can search movie which gives 0 results, but I don't have idea what other error I can simulate now :)
     /*
@@ -15,13 +13,40 @@ const ResultBody = () => {
         setMovies(0); 
     }, [])
     */
+
+    useEffect(() => {
+        setMovies(movieMock); 
+    }, [])
+
+    const [filter, setFilter] = useState("All");
+
+    const [sort, setSort] = useState("release_date_desc");
+
+    const changeFilter = (filter) => {
+        setFilter(filter)
+    }
+
+    const changeSort = (sort) => {
+        setSort(sort)
+    }
+
+    const sortByKey = (mov1, mov2, key) => {
+        if (key.includes("_desc")) {
+            key = key.slice(0, -5);
+            return mov1[key] < mov2[key] ? 1 : -1; 
+        }
+        else return mov1[key] < mov2[key] ? -1 : 1; 
+    }
+
+    let filteredMovies = filter === "All" ? movies : movies.filter(movie => movie.genres.includes(filter));
+    let sortedMovies = filteredMovies.sort((mov1, mov2) => sortByKey(mov1, mov2, sort));
     
     return (
         <div className="result-body">
-        <OptionsMenu />
-        <div className="result-found-text">{movies.length} movies found</div>
+        <OptionsMenu setFilter={changeFilter} setSort={changeSort} />
+        <div className="result-found-text">{sortedMovies.length} movies found</div>
         <div className="movie-card-area">
-            {movies.map(movie => <MovieCard movie={movie} key={movie.id} />)}
+            {sortedMovies.map(movie => <MovieCard movie={movie} key={movie.id} />)}
         </div>
     </div>
     )

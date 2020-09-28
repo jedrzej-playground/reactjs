@@ -3,9 +3,14 @@ import './OptionsFilter.css';
 
 const categories = ["All", "Documentary", "Comedy", "Horror", "Crime"]
 
-const OptionsFilter = () => {
+const OptionsFilter = ({setFilter}) => {
 
     const [selected, setSelected] = useState("All");
+
+    const updateFilter = (category) => {
+        setSelected(category);
+        setFilter(category);
+    }
 
     return(
         <div className="options-filter">
@@ -14,7 +19,7 @@ const OptionsFilter = () => {
                     <li 
                         className={selected === category ? "filter-element-selected" : "filter-element"} 
                         key={`category-${category}`}
-                        onClick={() => setSelected(category)}
+                        onClick={() => updateFilter(category)}
                     >{category}</li>
                 )}
             </ul>
