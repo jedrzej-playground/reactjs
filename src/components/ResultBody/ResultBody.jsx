@@ -14,8 +14,8 @@ const ResultBody = ({onCoverClick}) => {
     }, [])
     */
 
-   useEffect(() => {
-    setMovies(movieMock); 
+    useEffect(() => {
+        setMovies(movieMock); 
     }, [])
 
     const [filter, setFilter] = useState("All");
